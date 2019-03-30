@@ -7,6 +7,9 @@
             "name": "Igor Ferreira"
         }
     ],
+    "config": {
+      "optimize-autoloader": true
+    },
     "require": {
         "php-di/php-di": "^6.0",
         "phake/phake": "^3.1"
@@ -16,7 +19,7 @@
     },
     "autoload": {
       "psr-4": {
-        "Example\\" : "src"
+        "Example\\" : "src/"
       },
     "files": ["config.php"]
     },
