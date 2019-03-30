@@ -1,12 +1,13 @@
 <?php
 namespace Example;
 
-class PersonService implements IPersonService {   
+use Example\Db\IPersonDB;
+
+class PersonService implements IPersonService {
 
     private $personDB;
 
-    public function __construct(IPersonDB $personDB)
-    {
+    public function __construct(IPersonDB $personDB) {
         $this->personDB = $personDB;
     }
     

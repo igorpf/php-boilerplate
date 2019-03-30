@@ -1,7 +1,9 @@
 <?php
-namespace Example;
+namespace Example\Db;
 
-class PersonDB implements IPersonDB {   
+use Example\Person;
+
+class PersonDB implements IPersonDB {
     
     public function findAllByName($name) : array {
     	// Pretend to do real DB access

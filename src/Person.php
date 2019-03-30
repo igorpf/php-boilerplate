@@ -1,8 +1,7 @@
 <?php
 namespace Example;
 
-class Person
-{
+class Person {
 
     /**
     * @var string

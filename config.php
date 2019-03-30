@@ -2,5 +2,5 @@
 
 return [
     Example\IPersonService::class => DI\get(Example\PersonService::class),
-    Example\IPersonDB::class => DI\get(Example\PersonDB::class)
+    Example\Db\IPersonDB::class => DI\get(Example\Db\PersonDB::class)
 ];
