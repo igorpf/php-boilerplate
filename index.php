@@ -1,16 +1,13 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/bootstrap.php';
 
 try {
-    $containerBuilder = new DI\ContainerBuilder();
-    $containerBuilder->addDefinitions('config.php');
-    $container = $containerBuilder->build();
     $personService = $container->get('Example\\IPersonService');
-    $allPeople = $personService->findAllByName("oi");
+    $people = $personService->findAllByName('oi');
     
-    foreach ($allPeople as $person) {
-        echo $person->getName().'<br>';
-    }
+    echo $twig->render('index.twig', [
+        'people' => $people
+    ]);
 } catch (Exception $e) {
     echo $e->getMessage();
 }

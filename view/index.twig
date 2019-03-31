@@ -1,0 +1,11 @@
+<div>
+    User List
+</div>
+<ul>
+    {% for person in people %}
+        <li>{{ person.name }}</li>
+    {% else %}
+        No users have been found.
+    {% endfor %}
+</ul>
+
