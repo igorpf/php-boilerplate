@@ -1,0 +1,15 @@
+<header>
+    {% include 'style.twig' %}
+    {% include 'header.twig' %}
+
+    {# Any kind of custom header content will be placed here#}
+    {% block header %} {% endblock %}
+</header>
+
+<div class="main">
+    {% block content %} {% endblock %}
+</div>
+
+<footer>
+    {% include 'footer.twig' %}
+</footer>

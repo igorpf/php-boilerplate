@@ -1,11 +1,14 @@
-<div>
-    User List
-</div>
-<ul>
-    {% for person in people %}
-        <li>{{ person.name }}</li>
-    {% else %}
-        No users have been found.
-    {% endfor %}
-</ul>
+{% extends 'templates/master.twig' %}
 
+{% block content %}
+    <div>
+        User List
+    </div>
+    <ul>
+        {% for person in people %}
+            <li>{{ person.name }}</li>
+        {% else %}
+            No users have been found.
+        {% endfor %}
+    </ul>
+{% endblock %}
