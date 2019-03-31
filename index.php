@@ -6,6 +6,7 @@ try {
     $people = $personService->findAllByName('oi');
     
     echo $twig->render('index.twig', [
+        'assetsPath' => 'view/',
         'people' => $people
     ]);
 } catch (Exception $e) {
