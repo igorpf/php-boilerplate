@@ -7,10 +7,13 @@ try {
     $container = $containerBuilder->build();
     $personService = $container->get('Example\\IPersonService');
     $allPeople = $personService->findAllByName("oi");
+
+    $latte = new Latte\Engine;
+    $latte->setTempDirectory('cache/');
+    $parameters['items'] = ['one', 'two', 'three'];
+    $latte->render('view/index.latte', $parameters);
     
-    foreach ($allPeople as $person) {
-        echo $person->getName().'<br>';
-    }
+
 } catch (Exception $e) {
     echo $e->getMessage();
 }
