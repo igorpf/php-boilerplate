@@ -14,4 +14,12 @@ class PersonService implements IPersonService {
     public function findAllByName($name) : array {
         return $this->personDB->findAllByName($name);
     }
+
+    public function findAll(): array {
+        return $this->personDB->findAll();
+    }
+
+    public function insert(Person $objPerson): void {
+        $this->personDB->insert($objPerson);
+    }
 }

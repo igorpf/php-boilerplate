@@ -12,7 +12,7 @@
     </div>
     <ul>
         {% for person in people %}
-            <li>{{ person.name }}</li>
+            <li>Name: {{ person.username }}, email: {{ person.email }}</li>
         {% else %}
             No users have been found.
         {% endfor %}
