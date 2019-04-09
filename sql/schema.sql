@@ -13,3 +13,8 @@ INSERT INTO person (username, email) VALUES ('Some user', 'example@example.com')
 INSERT INTO person (username, email) VALUES ('Another user', 'test@example.com');
 INSERT INTO person (username, email) VALUES ('Test 123', 'test@test.com');
 INSERT INTO person (username, email) VALUES ('Test vvdv', '212@test.com');
+
+CREATE TABLE employee (
+    id serial PRIMARY KEY,
+    name varchar(100) NOT NULL
+);
