@@ -7,9 +7,6 @@
             "name": "Igor Ferreira"
         }
     ],
-    "config": {
-      "optimize-autoloader": true
-    },
     "require": {
         "php-di/php-di": "^6.0",
         "phake/phake": "^3.1"
